@@ -1,0 +1,12 @@
+<template name='mainLayout'>
+	{{> navbar}}
+	<main>
+		<div class="container">
+			{{> flashMessages}}
+			{{> Template.dynamic template=main}}
+		</div>
+	</main>
+
+	This is main layout
+	
+</template>
