@@ -1,23 +1,23 @@
 <template name='newGuest'>
 	<h3>Dodaj nowego gościa</h3>
-	<form class="add-image-info">
+	<form class='addNewGuest'>
 		<div class="row">
 			<div class="col-md-4">
 			    <div class="form-group">
 	        		<label>Imię i nazwisko</label>
-	        		<input type="text" class="form-control" id="name" name="title" placeholder="Imię i nazwisko">
+	        		<input type="text" class="form-control" name="name" placeholder="Imię i nazwisko">
 	    		</div>
 			</div>
 			<div class="col-md-4">
 			    <div class="form-group">
 			        <label>e-mail</label>
-			        <input type="email" class="form-control" id="name" name="title" placeholder="e-mail">
+			        <input type="email" class="form-control" name="eMail" placeholder="e-mail">
 			    </div>
 			</div>
 			<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Numer rezerwacji</label>
-			        <input type="number" class="form-control" id="name" name="title" placeholder="Numer rezerwacji">
+			        <input type="number" class="form-control" name="bookingReservationNumber" placeholder="Numer rezerwacji">
 			    </div>					
 			</div>
 		</div>
@@ -25,43 +25,43 @@
 			<div class="col-md-4">
 				<div class="form-group">
 			        <label>Telefon</label>
-			        <input type="tel" class="form-control" id="name" name="title" placeholder="Telefon">
+			        <input type="tel" class="form-control" name="phone" placeholder="Telefon">
 			    </div> 
 			</div>
 			<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Język</label>
-			        <input type="text" class="form-control" id="name" name="title" placeholder="Język">
+			        <input type="text" class="form-control" name="language" placeholder="Język">
 	    		</div>
 			</div>
 			<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Liczba gości</label>
-			        <input type="number" class="form-control" id="name" name="title" placeholder="Liczba gości">
+			        <input type="number" class="form-control" name="bookingGuestAmmount" placeholder="Liczba gości">
 			    </div>				
 			</div>
 		</div>	
 	    <div class="form-group">
 	        <label>Adres</label>
-	        <textarea class="form-control" id="story" name="story" placeholder="Adres"></textarea>
+	        <textarea class="form-control" name="address" placeholder="Adres"></textarea>
 	    </div> 	    
 	    <div class="row">
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Data przyjazdu</label>
-			        <input type="date" class="form-control" id="name" name="title">
+			        <input type="date" class="form-control" name="bookingArrivalDdate">
 			    </div>	    		
 	    	</div>
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Data wyjazdu</label>
-			        <input type="date" class="form-control" id="name" name="title">
+			        <input type="date" class="form-control" name="bookingDepartureDate">
 			    </div>	    		
 	    	</div>
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Data otrzymania rezerwacji</label>
-			        <input type="date" class="form-control" id="name" name="title">
+			        <input type="date" class="form-control" name="bookingReservationDate">
 			    </div>    		
 	    	</div>
 	    </div>
@@ -69,19 +69,19 @@
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Całkowity koszt rezerwacji</label>
-			        <input type="number" class="form-control" id="name" name="title" placeholder="Całkowity koszt rezerwacji">
+			        <input type="number" class="form-control" name="bookingTotalCost" placeholder="Całkowity koszt rezerwacji">
 			    </div>	    		
 	    	</div>
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Kwota objęta prowizją</label>
-			        <input type="text" class="form-control" id="name" name="title" placeholder="Kwota objęta prowizją">
+			        <input type="text" class="form-control" name="bookingCommissionableAmount" placeholder="Kwota objęta prowizją">
 			    </div>	    		
 	    	</div>
 	    	<div class="col-md-4">
 			    <div class="form-group">
 			        <label>Prowizja</label>
-			        <input type="text" class="form-control" id="name" name="title" placeholder="Prowizja">
+			        <input type="text" class="form-control" name="bookingCommission" placeholder="Prowizja">
 			    </div>		    		
 	    	</div>
 	    </div>
