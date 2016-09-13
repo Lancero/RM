@@ -3,13 +3,13 @@ Template.newGuest.onCreated(function(){
 });
 
 Template.newGuest.onRendered(function(){
-	//Datetime picker enable & format set
+	//Format set
 	this.$('.datetimepicker').datetimepicker({
 		format: "D-MM-YYYY"
 	});
 
     $('#datetimepicker2').datetimepicker({
-        useCurrent: false //Important! See issue #1075
+        useCurrent: false
     });
     $('#datetimepicker3').datetimepicker({
         useCurrent: false
@@ -26,9 +26,6 @@ Template.newGuest.onRendered(function(){
     $("#datetimepicker2").on("dp.change", function (e) {
         $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
     });
-
-
-
 });
 
 Template.newGuest.events({

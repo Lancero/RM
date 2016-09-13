@@ -1,14 +1,76 @@
 <template name='guestDetails'>
-<p>Details</p>
-<button type="button" class="btn btn-primary">Test</button>
-	<!-- {{#with guest}} -->
+	{{#with guest}}
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					{{name}}
-					{{phone}}
+				<div class="col-md-6">
+					<h3>{{name}} {{bReservationNumber}}</h3>
+					<h3>{{bArrivalDate}} {{bDepartureDate}}</h3>
+					<p>Telefon {{phone}} e-mail {{eMail}} język {{language}} ilość gośći{{bGuestAmmount}}</p>
+					<p>Adres {{address}} Data rezerwacji {{bReservationDate}}  </p>	
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+						    <tr>
+						    	<th>Całkowity koszt rezerwacji</th>
+							    <th>Opłata klimatyczna</th>
+							    <th>Kwota objęta prowizją</th>
+							    <th>Prowizja Booking.com</th>
+							</tr>
+							<tr>
+							    <td>{{bTotalCost}} PLN</td>
+							    <td>{{touristTax bTotalCost bCommissionableAmount}} PLN</td>
+							    <td>{{bCommissionableAmount}} PLN</td>
+							    <td>{{bCommission}} PLN</td>
+							</tr>
+						</table>						
+					</div>
 				</div>
 			</div>
-		</div>
-	<!-- {{/with}} -->
+			<div class="btn-group pull-right" role="group" aria-label="UI buttons">
+				<button type="button" class="btn btn-primary">Edytuj</button>
+				<button type="button" class="btn btn-danger">Anulacja</button>
+			</div>
+
+			<!-- Extra Info Section -->
+			<h3>Dodatkowe dane</h3>
+			<form class="extraInfo">
+				<div class="row">
+					<div class="col-md-2">
+					    <div class="form-group">
+			        		<label>Zapłacona kwota</label>
+			        		<input type="number" class="form-control" name="moneyPaid" placeholder="Zapłacona kwota">
+			    		</div>
+					</div>
+					<div class="col-md-1">
+					    <div class="form-group">
+					        <label>Waluta</label>
+					        <input type="text" class="form-control" name="currency" placeholder="Waluta">
+					    </div>
+					</div>
+					<div class="col-md-2">
+					    <div class="form-group">
+					        <label>Ilość gości</label>
+					        <input type="number" class="form-control" name="realGuestAmmount" placeholder="Ilość gości">
+					    </div>					
+					</div>	
+					<div class="col-md-2">
+					    <div class="form-group">
+					        <label>Prowizja</label>
+					        <input type="number" class="form-control" name="commission" placeholder="Prowizja">
+					    </div>					
+					</div>
+				</div>
+					<div class="row">
+						<div class="col-md-6">
+						    <div class="form-group">
+						        <label>Uwagi</label>
+						        <textarea class="form-control" name="comments" placeholder="Uwagi"></textarea>
+						    </div> 
+						</div>
+					</div>				
+				<button type="submit" class="btn btn-primary save">Zapisz</button>
+			</form>
+		</div>	
+	{{/with}}
 </template>
