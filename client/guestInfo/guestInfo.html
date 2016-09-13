@@ -1,3 +1,17 @@
 <template name='guestInfo'>
-	{{name}} {{bReservationNumber}} {{bArrivalDate}} {{bDepartureDate}}
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row guestInfo">
+					<div class="col-md-2">
+						<h4>{{bArrivalDate}}<br>{{bDepartureDate}}</h4>
+					</div>
+					<div class="col-md-8 guestName">
+						<h3>{{name}}<span class="pull-right">{{bReservationNumber}}</span></h3>	  
+					</div>
+					<div class="col-md-2">
+						<a href="/guest/{{_id}}" class="btn btn-primary more pull-right">Szczegóły</a>
+					</div>			
+				</div>		
+			</div>
+		</div>
 </template>

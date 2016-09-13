@@ -6,3 +6,15 @@ body {
 .navbar-right {
 	margin-right: 150px;
 }
+.guestInfo {
+	background-color: #eee;
+	border-radius: 5px;
+	color: #000;
+	margin: 5px;	
+}
+.guestName {
+	margin-top: 0;
+}
+.more {
+	margin-top: 10px;
+}

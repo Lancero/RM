@@ -4,6 +4,6 @@ Template.guestsList.onCreated(function(){
 
 Template.guestsList.helpers({
 	guests: function(){
-		return Guests.find();
+		return Guests.find({}, {sort: {bArrivalDate: 1}});
 	}
-})
+});
